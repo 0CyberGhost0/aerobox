@@ -7,7 +7,7 @@ import { ID, Models, Query } from "node-appwrite";
 import { constructFileUrl, getFileType, parseStringify } from "@/lib/utils";
 import { revalidatePath } from "next/cache";
 import { getCurrentUser } from "@/lib/actions/user.actions";
-
+// import { UploadFileProps } from "@/types/index";
 const handleError = (error: unknown, message: string) => {
   console.log(error, message);
   throw error;
@@ -23,6 +23,7 @@ export const uploadFile = async ({
 
   try {
     const inputFile = InputFile.fromBuffer(file, file.name);
+    console.log(appwriteConfig.bucketId);
 
     const bucketFile = await storage.createFile(
       appwriteConfig.bucketId,
