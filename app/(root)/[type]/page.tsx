@@ -1,5 +1,5 @@
 import Card from '@/components/ui/Card';
-import Sort from '@/components/ui/Sort';
+import Sort from '@/components/Sort';
 import { getFiles } from '@/lib/actions/file.actions';
 import { Models } from 'node-appwrite';
 import React from 'react'

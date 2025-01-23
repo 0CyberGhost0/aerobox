@@ -165,9 +165,10 @@ export const updateFileUsers = async ({
     revalidatePath(path);
     return parseStringify(updatedFile);
   } catch (error) {
-    handleError(error, "Failed to rename file");
-  }
+    handleError(error, "Failed to update file users");
+  };
 };
+
 
 export const deleteFile = async ({
   fileId,
